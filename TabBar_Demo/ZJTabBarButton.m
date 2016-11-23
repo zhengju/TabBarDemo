@@ -75,7 +75,7 @@
         [self setTitleColor:RGBACOLOR(63, 101, 186, 1.0) forState:UIControlStateSelected];
         [self setTitleColor:RGBACOLOR(102, 102, 102, 1.0) forState:UIControlStateNormal];
  
-    }//选中状态
+    }
     return self;
 }
 //重写去掉高亮的状态

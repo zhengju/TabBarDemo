@@ -27,6 +27,7 @@
         dispatch_once(&predicate, ^{
 
             tabar = [[self alloc]init];
+            
         });
 }
     return tabar;
@@ -79,6 +80,7 @@
     
     ZJTabBar *customTabBar=[ZJTabBar shareTabBar];
     
+    
     customTabBar.frame=self.tabBar.bounds;
     
     self.customTabBar=customTabBar;
@@ -89,6 +91,16 @@
     
 }
 
+/**
+ 设置选中的按钮
+
+ @param defaultSelectedIndex 选中按钮的位置
+ */
+- (void)setDefaultSelectedIndex:(NSInteger)defaultSelectedIndex{
+    _defaultSelectedIndex = defaultSelectedIndex;
+    self.customTabBar.selectedIndex = _defaultSelectedIndex;
+    
+}
 //监听按的改变
 - (void)tabBar:(ZJTabBar *)tabBar didselectedButtonFrom:(int)from to:(int)to{
     
@@ -97,9 +109,6 @@
     
 }
 
-- (void)didselectedButtonFrom:(int)from to:(int)to {
-    self.selectedIndex=to;
-}
 
  /*
  Item：就是苹果的模型（用于保存数据）
@@ -135,7 +144,8 @@
     for (ZJNavigationController *navigationController in self.childViewControllers) {
         [navigationController popToRootViewControllerAnimated:NO];
     }
-    [self.customTabBar selectAtIndex:0];
+    self.defaultSelectedIndex = 0;
+    
     
 }
 

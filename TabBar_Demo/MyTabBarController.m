@@ -8,10 +8,6 @@
 
 #import "MyTabBarController.h"
 
-#import "ZJNavigationController.h"
-
-
-
 @interface MyTabBarController ()
 
 @end
@@ -21,9 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   self.defaultSelectedIndex = 1;
+    
 }
 -(void)setUPAllChildViewController{
 
+    
+    
+    
     self.childItemsArray = @[
                                  @{kClassKey  : @"HomeController",
                                    kTitleKey  : @"首页",

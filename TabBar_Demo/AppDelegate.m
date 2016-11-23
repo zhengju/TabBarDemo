@@ -20,6 +20,7 @@
     self.window.backgroundColor             = [UIColor clearColor];
     
     self.zjTabBarController = [MyTabBarController shareTabar];
+
     self.window.rootViewController          = self.zjTabBarController;
     [self.window makeKeyAndVisible];
     return YES;

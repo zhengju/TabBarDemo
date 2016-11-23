@@ -2,27 +2,33 @@
  
 #import <UIKit/UIKit.h>
 @class ZJTabBar;
-@class ZJTabBarButton;
 
 @protocol ZJTabBarDetagate <NSObject>
 @optional
 -(void)tabBar:(ZJTabBar *)tabBar didselectedButtonFrom:(int )from to: (int )to;
 @end
 
-@protocol ZJTabBarLoginDetagate <NSObject>
-
-- (void)login;
-
-@end
 @interface ZJTabBar : UIView
 @property(nonatomic,weak)id<ZJTabBarDetagate>delegate;
-@property(nonatomic,weak)id<ZJTabBarLoginDetagate>loginDelegate;
--(void)addTabBarButtonWithItem:(UITabBarItem *)item;
-+(id)shareTabBar;
--(void)buttonClick:(ZJTabBarButton *)button;
-@property(nonatomic,strong)NSMutableArray *tabBarButtons;
-- (void)selectAtIndex:(NSInteger)index;
 
+/**
+ 生成单例对象
+ 
+ @return 返回单例
+ */
++(id)shareTabBar;
+
+/**
+ 被选中的按钮的位置
+ */
+@property(nonatomic)NSInteger selectedIndex;
+
+/**
+ 添加按钮元素
+
+ @param item UITabBarItem ，携带配置信息
+ */
+-(void)addTabBarButtonWithItem:(UITabBarItem *)item;
 
 @end
 

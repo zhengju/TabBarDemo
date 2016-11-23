@@ -8,7 +8,7 @@
 @interface ZJTabBar()
 
 @property(nonatomic,weak)ZJTabBarButton *selectedButton;
- 
+@property(nonatomic,strong)NSMutableArray *tabBarButtons;
 @end
 @implementation ZJTabBar
 -(NSMutableArray *)tabBarButtons{
@@ -46,20 +46,35 @@
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchDown];
     button.tag = self.tabBarButtons.count - 1;
     //4、默认选中第零个
-    if(self.tabBarButtons.count==1){
-        [self buttonClick:button];
-    }
+    self.selectedIndex = 0;
     
 }
-//监听按钮点击
+
+- (void)setSelectedIndex:(NSInteger)selectedIndex{
+    
+    if ((_selectedIndex < self.tabBarButtons.count) && self.tabBarButtons.count > 0) {
+        _selectedIndex = selectedIndex;
+        ZJTabBarButton * button = [self.tabBarButtons objectAtIndex:_selectedIndex];
+        
+        [self buttonClick:button];
+    }
+}
+
+/**
+ 监听按钮点击
+
+ @param button 传入的button
+ */
 -(void)buttonClick:(ZJTabBarButton *)button{
 
-    if([self.delegate respondsToSelector:@selector(tabBar:didselectedButtonFrom:to:)]){
-        [self.delegate tabBar:self didselectedButtonFrom:(int )self.selectedButton.tag to:(int)button.tag];
+    if (self.selectedButton != button) {
+        if([self.delegate respondsToSelector:@selector(tabBar:didselectedButtonFrom:to:)]){
+            [self.delegate tabBar:self didselectedButtonFrom:(int )self.selectedButton.tag to:(int)button.tag];
+        }
+        self.selectedButton.selected = NO;
+        button.selected=YES;
+        self.selectedButton=button;
     }
-    self.selectedButton.selected = NO;
-    button.selected=YES;
-    self.selectedButton=button;
 }
 
 -(void)layoutSubviews{
@@ -83,32 +98,6 @@
         
     }
 }
-//实现代理方法
-- (void)LoginSuccess {
-    
-    
-    ZJTabBarButton *button = [self viewWithTag:2];
-    
-    self.selectedButton.selected = NO;
-    button.selected=YES;
-    self.selectedButton=button;
-    
-    if([self.delegate respondsToSelector:@selector(tabBar:didselectedButtonFrom:to:)]){
-        [self.delegate tabBar:self didselectedButtonFrom:(int )self.selectedButton.tag to:(int)button.tag];
-    }
-    self.selectedButton.selected = NO;
-    button.selected=YES;
 
-}
-- (void)LoginCancel{
 
-}
-
-- (void)selectAtIndex:(NSInteger)index {
-    if (index > self.tabBarButtons.count) {
-        return;
-    }
-    ZJTabBarButton *button = self.tabBarButtons[index];
-    [self buttonClick:button];
-}
 @end

@@ -8,6 +8,8 @@
 
 #import "LoginController.h"
 
+#import "MyTabBarController.h"
+
 @interface LoginController ()
 
 @end
@@ -23,6 +25,9 @@
 }
 - (IBAction)loginBtn:(UIButton *)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+        MyTabBarController * tabBarController = [MyTabBarController shareTabar];
+        tabBarController.defaultSelectedIndex = 2;
         
     }];
     
