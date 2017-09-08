@@ -67,6 +67,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     //做监听工作
+    
+    
+    
 }
 
 -(id)initWithFrame:(CGRect)frame{
@@ -74,10 +77,9 @@
     if(self=[super initWithFrame:frame]){
         
         self.imageView.contentMode = UIViewContentModeCenter;
+        
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        
-
     }
     return self;
 }

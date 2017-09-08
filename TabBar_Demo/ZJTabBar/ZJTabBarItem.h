@@ -3,7 +3,7 @@
 //  TabBar_Demo
 //
 //  Created by zhengju on 2017/9/8.
-//  Copyright © 2017年 zhengju. All rights reserved.
+//  Copyright © 2017年 郑俱. All rights reserved.
 //控制按钮显示情况
 
 #import <UIKit/UIKit.h>

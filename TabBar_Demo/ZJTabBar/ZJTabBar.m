@@ -106,7 +106,6 @@
         
         ZJTabBarButton *button = self.tabBarButtons[index];
         
-        
         CGFloat buttonX = index*buttonW;
         
         button.frame=CGRectMake(buttonX, buttonY, buttonW, buttonH);
