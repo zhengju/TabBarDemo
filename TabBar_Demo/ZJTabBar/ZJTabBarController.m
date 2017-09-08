@@ -152,11 +152,13 @@
         ZJNavigationController *nav = [[ZJNavigationController alloc] initWithRootViewController:vc];
         ZJTabBarItem *item = [[ZJTabBarItem alloc]init];
         item.title = dict[kTitleKey];
-        item.itemNomalColor = self.itemNomalColor;
-        item.itemSelectedColor = self.itemSelectedColor;
-        
         item.image = [UIImage imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        
+        item.itemNomalColor = self.itemNomalColor;
+        item.itemSelectedColor = self.itemSelectedColor;
+        item.font = self.font;
+        
         [self addChildViewController:nav];//添加视图控制器
         [self.customTabBar addTabBarButtonWithItem:item];
     }];

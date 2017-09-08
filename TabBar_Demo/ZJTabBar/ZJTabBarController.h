@@ -22,12 +22,16 @@ static ZJTabBarController * tabar = nil;
  选中颜色
  */
 @property(strong,nonatomic) UIColor * itemSelectedColor;
-
+/**
+ 字体显示大小,默认字体大小为 14
+ */
+@property(nonatomic,strong) UIFont * font;
 
 /**
  是否做拦截
  */
 @property(assign,nonatomic) BOOL  isIntercept;
+
 
 @property (nonatomic,strong) NSArray *childItemsArray;
 /**

@@ -12,11 +12,8 @@
 		1803F8981CF554A70065AE93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1803F8961CF554A70065AE93 /* Main.storyboard */; };
 		1803F89A1CF554A70065AE93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1803F8991CF554A70065AE93 /* Assets.xcassets */; };
 		1803F89D1CF554A70065AE93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1803F89B1CF554A70065AE93 /* LaunchScreen.storyboard */; };
-		1803F8A81CF554A70065AE93 /* TabBar_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8A71CF554A70065AE93 /* TabBar_DemoTests.m */; };
-		1803F8B31CF554A70065AE93 /* TabBar_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8B21CF554A70065AE93 /* TabBar_DemoUITests.m */; };
 		188C54291DDEAE130016705B /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C54271DDEAE130016705B /* MyTabBarController.m */; };
 		189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECB971DD1EB5D00DBBB2F /* SuperController.m */; };
-		189ECB9A1DD1EB5D00DBBB2F /* SuperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECB981DD1EB5D00DBBB2F /* SuperController.xib */; };
 		189ECB9E1DD1EB7400DBBB2F /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECB9C1DD1EB7400DBBB2F /* HomeController.m */; };
 		189ECB9F1DD1EB7400DBBB2F /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECB9D1DD1EB7400DBBB2F /* HomeController.xib */; };
 		189ECBA31DD1EB8800DBBB2F /* ServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECBA11DD1EB8800DBBB2F /* ServiceController.m */; };
@@ -61,16 +58,11 @@
 		1803F89C1CF554A70065AE93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1803F89E1CF554A70065AE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1803F8A31CF554A70065AE93 /* TabBar_DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBar_DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1803F8A71CF554A70065AE93 /* TabBar_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBar_DemoTests.m; sourceTree = "<group>"; };
-		1803F8A91CF554A70065AE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1803F8AE1CF554A70065AE93 /* TabBar_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBar_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1803F8B21CF554A70065AE93 /* TabBar_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBar_DemoUITests.m; sourceTree = "<group>"; };
-		1803F8B41CF554A70065AE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188C54261DDEAE130016705B /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
 		188C54271DDEAE130016705B /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
 		189ECB961DD1EB5D00DBBB2F /* SuperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperController.h; sourceTree = "<group>"; };
 		189ECB971DD1EB5D00DBBB2F /* SuperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperController.m; sourceTree = "<group>"; };
-		189ECB981DD1EB5D00DBBB2F /* SuperController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperController.xib; sourceTree = "<group>"; };
 		189ECB9B1DD1EB7400DBBB2F /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		189ECB9C1DD1EB7400DBBB2F /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		189ECB9D1DD1EB7400DBBB2F /* HomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
@@ -127,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				1803F88C1CF554A70065AE93 /* TabBar_Demo */,
-				1803F8A61CF554A70065AE93 /* TabBar_DemoTests */,
-				1803F8B11CF554A70065AE93 /* TabBar_DemoUITests */,
 				1803F88B1CF554A70065AE93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,11 +147,9 @@
 				188C54271DDEAE130016705B /* MyTabBarController.m */,
 				189ECB961DD1EB5D00DBBB2F /* SuperController.h */,
 				189ECB971DD1EB5D00DBBB2F /* SuperController.m */,
-				189ECB981DD1EB5D00DBBB2F /* SuperController.xib */,
 				1803F8961CF554A70065AE93 /* Main.storyboard */,
 				1803F8991CF554A70065AE93 /* Assets.xcassets */,
 				1803F89B1CF554A70065AE93 /* LaunchScreen.storyboard */,
-				1803F89E1CF554A70065AE93 /* Info.plist */,
 				1803F88D1CF554A70065AE93 /* Supporting Files */,
 			);
 			path = TabBar_Demo;
@@ -170,29 +158,12 @@
 		1803F88D1CF554A70065AE93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1803F89E1CF554A70065AE93 /* Info.plist */,
 				1803F88E1CF554A70065AE93 /* main.m */,
 				1803F8901CF554A70065AE93 /* AppDelegate.h */,
 				1803F8911CF554A70065AE93 /* AppDelegate.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1803F8A61CF554A70065AE93 /* TabBar_DemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				1803F8A71CF554A70065AE93 /* TabBar_DemoTests.m */,
-				1803F8A91CF554A70065AE93 /* Info.plist */,
-			);
-			path = TabBar_DemoTests;
-			sourceTree = "<group>";
-		};
-		1803F8B11CF554A70065AE93 /* TabBar_DemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1803F8B21CF554A70065AE93 /* TabBar_DemoUITests.m */,
-				1803F8B41CF554A70065AE93 /* Info.plist */,
-			);
-			path = TabBar_DemoUITests;
 			sourceTree = "<group>";
 		};
 		189ECB8A1DD1EAE400DBBB2F /* Me */ = {
@@ -428,7 +399,6 @@
 				1803F8981CF554A70065AE93 /* Main.storyboard in Resources */,
 				189ECB9F1DD1EB7400DBBB2F /* HomeController.xib in Resources */,
 				189ECBA91DD1EB9600DBBB2F /* MeController.xib in Resources */,
-				189ECB9A1DD1EB5D00DBBB2F /* SuperController.xib in Resources */,
 				189ECBA41DD1EB8800DBBB2F /* ServiceController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +445,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1803F8A81CF554A70065AE93 /* TabBar_DemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +452,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1803F8B31CF554A70065AE93 /* TabBar_DemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
