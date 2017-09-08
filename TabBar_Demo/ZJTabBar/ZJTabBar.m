@@ -32,7 +32,7 @@
     
     return myTabBar;
 }
--(void)addTabBarButtonWithItem:(UITabBarItem *)item{
+-(void)addTabBarButtonWithItem:(ZJTabBarItem *)item{
     //1、创建按钮
     ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
     

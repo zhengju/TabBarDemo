@@ -5,6 +5,7 @@
 #import "ZJNavigationController.h"
 #import <objc/message.h>
 #import "ZJTabBar.h"
+#import "ZJTabBarItem.h"
 #import "ZJTabBarButton.h"
 
 @interface ZJTabBarController ()<ZJTabBarDetagate>
@@ -149,8 +150,11 @@
         UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
         vc.title = dict[kTitleKey];
         ZJNavigationController *nav = [[ZJNavigationController alloc] initWithRootViewController:vc];
-        UITabBarItem *item = nav.tabBarItem;
+        ZJTabBarItem *item = [[ZJTabBarItem alloc]init];
         item.title = dict[kTitleKey];
+        item.itemNomalColor = self.itemNomalColor;
+        item.itemSelectedColor = self.itemSelectedColor;
+        
         item.image = [UIImage imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [self addChildViewController:nav];//添加视图控制器

@@ -27,6 +27,7 @@
 		18A0E95A1F624E6600675FDD /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9541F624E6600675FDD /* ZJTabBar.m */; };
 		18A0E95B1F624E6600675FDD /* ZJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9561F624E6600675FDD /* ZJTabBarButton.m */; };
 		18A0E95C1F624E6600675FDD /* ZJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9581F624E6600675FDD /* ZJTabBarController.m */; };
+		18A0E95F1F6251F600675FDD /* ZJTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E95E1F6251F600675FDD /* ZJTabBarItem.m */; };
 		18E181151DD2BB4A00F73D3A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181131DD2BB4A00F73D3A /* LoginController.m */; };
 		18E181161DD2BB4A00F73D3A /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E181141DD2BB4A00F73D3A /* LoginController.xib */; };
 		18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181181DD2BD5300F73D3A /* SetupController.m */; };
@@ -87,6 +88,8 @@
 		18A0E9561F624E6600675FDD /* ZJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarButton.m; sourceTree = "<group>"; };
 		18A0E9571F624E6600675FDD /* ZJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarController.h; sourceTree = "<group>"; };
 		18A0E9581F624E6600675FDD /* ZJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarController.m; sourceTree = "<group>"; };
+		18A0E95D1F6251F600675FDD /* ZJTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarItem.h; sourceTree = "<group>"; };
+		18A0E95E1F6251F600675FDD /* ZJTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarItem.m; sourceTree = "<group>"; };
 		18E181121DD2BB4A00F73D3A /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		18E181131DD2BB4A00F73D3A /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		18E181141DD2BB4A00F73D3A /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				18A0E9541F624E6600675FDD /* ZJTabBar.m */,
 				18A0E9551F624E6600675FDD /* ZJTabBarButton.h */,
 				18A0E9561F624E6600675FDD /* ZJTabBarButton.m */,
+				18A0E95D1F6251F600675FDD /* ZJTabBarItem.h */,
+				18A0E95E1F6251F600675FDD /* ZJTabBarItem.m */,
 				18A0E9571F624E6600675FDD /* ZJTabBarController.h */,
 				18A0E9581F624E6600675FDD /* ZJTabBarController.m */,
 			);
@@ -375,7 +380,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = zhengju;
+				ORGANIZATIONNAME = "郑俱";
 				TargetAttributes = {
 					1803F8891CF554A70065AE93 = {
 						CreatedOnToolsVersion = 7.1;
@@ -457,6 +462,7 @@
 				18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */,
 				189ECBA31DD1EB8800DBBB2F /* ServiceController.m in Sources */,
 				18A0E9591F624E6600675FDD /* ZJNavigationController.m in Sources */,
+				18A0E95F1F6251F600675FDD /* ZJTabBarItem.m in Sources */,
 				18A0E95A1F624E6600675FDD /* ZJTabBar.m in Sources */,
 				189ECB9E1DD1EB7400DBBB2F /* HomeController.m in Sources */,
 				18A0E95C1F624E6600675FDD /* ZJTabBarController.m in Sources */,

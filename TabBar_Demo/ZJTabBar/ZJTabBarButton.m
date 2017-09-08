@@ -3,6 +3,9 @@
 //封装button
 #define IWTabBarButtonImageRatio 0.6
 #import "ZJTabBarButton.h"
+
+#import "ZJTabBarItem.h"
+
 #pragma mark - 颜色值
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 @interface ZJTabBarButton()
@@ -25,7 +28,7 @@
     return CGRectMake(0, titleY, titleW, titleH);
 }
 //设置item
--(void)setItem:(UITabBarItem *)item{
+-(void)setItem:(ZJTabBarItem *)item{
     _item = item;
     //KVO监听属性改变
  
@@ -38,7 +41,12 @@
     //设置图片
     [self setImage:self.item.selectedImage forState:UIControlStateSelected];
     [self setImage:self.item.image forState:UIControlStateNormal];
- 
+    
+    [self setTitleColor:_item.itemSelectedColor forState:UIControlStateSelected];
+    [self setTitleColor:_item.itemNomalColor forState:UIControlStateNormal];
+    
+    self.titleLabel.font = _item.font;
+    
 }
 
 -(void)dealloc{
@@ -68,13 +76,8 @@
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
         
-        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
-        [self setTitleColor:RGBACOLOR(63, 101, 186, 1.0) forState:UIControlStateSelected];
-        [self setTitleColor:RGBACOLOR(102, 102, 102, 1.0) forState:UIControlStateNormal];
- 
+
     }
     return self;
 }

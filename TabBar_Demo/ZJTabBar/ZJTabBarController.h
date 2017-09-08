@@ -10,6 +10,20 @@
 static ZJTabBarController * tabar = nil;
 
 @interface ZJTabBarController : UITabBarController
+
+
+
+//地航栏按钮设置
+/**
+ 未选中字体颜色
+ */
+@property(strong,nonatomic) UIColor * itemNomalColor;
+/**
+ 选中颜色
+ */
+@property(strong,nonatomic) UIColor * itemSelectedColor;
+
+
 /**
  是否做拦截
  */

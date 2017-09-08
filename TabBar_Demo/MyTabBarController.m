@@ -9,6 +9,9 @@
 #import "MyTabBarController.h"
 #import "LoginController.h"
 #import "ZJNavigationController.h"
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
 @interface MyTabBarController ()
 
 @end
@@ -17,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.isIntercept = YES;
-   self.defaultSelectedIndex = 1;
+    
+    self.isIntercept = YES;
+   
+    self.defaultSelectedIndex = 1;
     
 }
 -(void)setUPAllChildViewController{
@@ -39,6 +44,15 @@
                                    kImgKey    : @"wode",
                                    kSelImgKey : @"wodexuanzhong"},
                                  ];
+    
+    
+    
+    
+    self.itemNomalColor = RGBACOLOR(102, 102, 102, 1.0);
+    
+    self.itemSelectedColor =  RGBACOLOR(63, 101, 186, 1.0);
+
+    
     
     [super setUPAllChildViewController];
 

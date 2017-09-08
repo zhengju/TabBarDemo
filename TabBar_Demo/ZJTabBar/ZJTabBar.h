@@ -2,7 +2,7 @@
  
 #import <UIKit/UIKit.h>
 @class ZJTabBar;
-
+@class ZJTabBarItem;
 @protocol ZJTabBarDetagate <NSObject>
 @optional
 -(void)tabBar:(ZJTabBar *)tabBar didselectedButtonFrom:(int )from to: (int )to;
@@ -28,7 +28,8 @@
 
  @param item UITabBarItem ，携带配置信息
  */
--(void)addTabBarButtonWithItem:(UITabBarItem *)item;
+
+-(void)addTabBarButtonWithItem:(ZJTabBarItem *)item;
 
 - (void)selectedSuccess;
 
