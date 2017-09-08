@@ -9,7 +9,7 @@
 #import "ServiceController.h"
 
 #import "LoginController.h"
-#import "ZjNavigationController.h"
+#import "ZJNavigationController.h"
 
 @interface ServiceController ()
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"服务";
+    self.title = @"购物车";
 }
 
 - (IBAction)loginClick:(UIButton *)sender {

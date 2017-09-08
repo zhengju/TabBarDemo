@@ -26,9 +26,11 @@
 - (IBAction)loginBtn:(UIButton *)sender {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
         
-        MyTabBarController * tabBarController = [MyTabBarController shareTabar];
-        tabBarController.defaultSelectedIndex = 2;
-        
+        //MyTabBarController * tabBarController = [MyTabBarController shareTabar];
+       // tabBarController.defaultSelectedIndex = 2;
+        if (self.loginSuccessBlock) {
+            self.loginSuccessBlock();
+        }
     }];
     
 }

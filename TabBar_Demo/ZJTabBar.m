@@ -1,12 +1,14 @@
 
- 
+
 #import "ZJTabBar.h"
 #import "ZJTabBarButton.h"
 
-#import "ZjNavigationController.h"
- 
-@interface ZJTabBar()
+#import "ZJNavigationController.h"
 
+@interface ZJTabBar()
+{
+    NSInteger _index;//若是做拦截，记录下当前选择的按钮位置
+}
 @property(nonatomic,weak)ZJTabBarButton *selectedButton;
 @property(nonatomic,strong)NSMutableArray *tabBarButtons;
 @end
@@ -25,7 +27,7 @@
     //&predicate这个断言的指针必须要全局化的保存，或者放在静态区内。使用存放在自动分配区域或者动态区域的断言，dispatch_once执行的结果是不可预知的。
     dispatch_once(&predicate, ^{
         myTabBar = [[ZJTabBar alloc]init];
-    
+        
     });
     
     return myTabBar;
@@ -33,7 +35,7 @@
 -(void)addTabBarButtonWithItem:(UITabBarItem *)item{
     //1、创建按钮
     ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
-   
+    
     [self addSubview:button];
     
     //添加按钮到数组中
@@ -47,13 +49,14 @@
     button.tag = self.tabBarButtons.count - 1;
     //4、默认选中第零个
     self.selectedIndex = 0;
-    
+    _index = 0;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex{
     
     if ((_selectedIndex < self.tabBarButtons.count) && self.tabBarButtons.count > 0) {
         _selectedIndex = selectedIndex;
+        _index = _selectedIndex;
         ZJTabBarButton * button = [self.tabBarButtons objectAtIndex:_selectedIndex];
         
         [self buttonClick:button];
@@ -62,27 +65,40 @@
 
 /**
  监听按钮点击
-
+ 
  @param button 传入的button
  */
 -(void)buttonClick:(ZJTabBarButton *)button{
-
+    
     if (self.selectedButton != button) {
+        
+        _index = button.tag;
+        
         if([self.delegate respondsToSelector:@selector(tabBar:didselectedButtonFrom:to:)]){
+            
             [self.delegate tabBar:self didselectedButtonFrom:(int )self.selectedButton.tag to:(int)button.tag];
         }
-        self.selectedButton.selected = NO;
-        button.selected=YES;
-        self.selectedButton=button;
     }
 }
 
--(void)layoutSubviews{
+- (void)selectedSuccess{
+    
+    ZJTabBarButton * button = self.tabBarButtons[_index];
+    
+    //几个按钮的互斥选择，点击成功才能换按钮的
+    self.selectedButton.selected = NO;
+    button.selected=YES;
+    self.selectedButton= button;
+    
+}
 
+-(void)layoutSubviews{
+    
     [super layoutSubviews];
- 
+    
     CGFloat buttonW = self.frame.size.width/self.subviews.count;
-        CGFloat buttonH = self.frame.size.height;
+    
+    CGFloat buttonH = self.frame.size.height;
     
     CGFloat buttonY = 0;
     
@@ -90,8 +106,9 @@
         
         ZJTabBarButton *button = self.tabBarButtons[index];
         
-      CGFloat buttonX = index*buttonW;
- 
+        
+        CGFloat buttonX = index*buttonW;
+        
         button.frame=CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         button.tag=index;

@@ -9,5 +9,5 @@
 #import "SuperController.h"
 
 @interface LoginController : SuperController
-
+@property (nonatomic , copy) dispatch_block_t loginSuccessBlock;
 @end

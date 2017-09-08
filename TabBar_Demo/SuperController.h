@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SuperController : UIViewController
-
+@property (strong, nonatomic) UIButton *backBtn;
 @end

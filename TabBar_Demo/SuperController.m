@@ -16,22 +16,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //返回按钮
+    [self.backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIButton *)backBtn{
+    if (_backBtn == nil) {
+        _backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        
+        [_backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"返回"]  forState:UIControlStateNormal];
+        _backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+        _backBtn.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+        UIBarButtonItem *leftBackBarBtn = [[UIBarButtonItem alloc] initWithCustomView:_backBtn];
+        self.navigationItem.leftBarButtonItem = leftBackBarBtn;
+    }
+    return _backBtn;
 }
+#pragma mark - backAction返回
+- (void)backAction
+{
+    if (self.navigationController.presentedViewController || self.navigationController.presentingViewController) {
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    }else{
+      
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
-*/
 
 @end

@@ -30,6 +30,8 @@
  */
 -(void)addTabBarButtonWithItem:(UITabBarItem *)item;
 
+- (void)selectedSuccess;
+
 @end
 
 

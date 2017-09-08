@@ -7,7 +7,8 @@
 //
 
 #import "MyTabBarController.h"
-
+#import "LoginController.h"
+#import "ZJNavigationController.h"
 @interface MyTabBarController ()
 
 @end
@@ -16,15 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     self.isIntercept = YES;
    self.defaultSelectedIndex = 1;
     
 }
 -(void)setUPAllChildViewController{
 
-    
-    
-    
     self.childItemsArray = @[
                                  @{kClassKey  : @"HomeController",
                                    kTitleKey  : @"首页",
@@ -32,7 +30,7 @@
                                    kSelImgKey : @"shouye"},
                                  
                                  @{kClassKey  : @"ServiceController",
-                                   kTitleKey  : @"服务",
+                                   kTitleKey  : @"购物车",
                                    kImgKey    : @"fuwu",
                                    kSelImgKey : @"fuwuxuanzhong"},
                                  
@@ -45,5 +43,25 @@
     [super setUPAllChildViewController];
 
 }
+- (void)tabBarDidselectedButtonFrom:(int)from to:(int)to block:(void (^)())success_block{
+    
 
+    [self interceptIndex:1 setSuccessBlock:^{
+      
+        
+            LoginController * controller = [[LoginController alloc]init];
+            ZJNavigationController * nav = [[ZJNavigationController alloc]initWithRootViewController:controller];;
+            
+          
+            controller.loginSuccessBlock = ^(){//登录ok的回调
+                
+                [self tabBarSelectedBtnSuccess:to];
+            };
+            
+            [self presentViewController:nav animated:YES completion:nil];
+//        }else{
+//            success_block();//封装
+//        }
+    }];
+}
 @end

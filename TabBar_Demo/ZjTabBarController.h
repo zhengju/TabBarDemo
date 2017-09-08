@@ -4,14 +4,16 @@
 #define kImgKey     @"imageName"
 #define kSelImgKey  @"selectedImageName"
 
-
-
 #import <UIKit/UIKit.h>
 @class ZJTabBarController;
 
 static ZJTabBarController * tabar = nil;
 
 @interface ZJTabBarController : UITabBarController
+/**
+ 是否做拦截
+ */
+@property(assign,nonatomic) BOOL  isIntercept;
 
 @property (nonatomic,strong) NSArray *childItemsArray;
 /**
@@ -22,11 +24,14 @@ static ZJTabBarController * tabar = nil;
 + (instancetype )shareTabar;
 
 #pragma mark 添所有的加子控制器
--(void)setUPAllChildViewController;
-
-
-
-
+- (void)setUPAllChildViewController;
+#pragma mark 拦截跳转，子类实现，就走方法
+- (void)tabBarDidselectedButtonFrom:(int)from to:(int)to block:(void(^)())success_block;
+- (void) interceptIndex:(int)index setSuccessBlock:(void(^)())success_block;
+#pragma mark 重置
 - (void)reSetup;
+#pragma 选择按钮成功
+- (void)tabBarSelectedBtnSuccess:(int)to;
+- (void)tabBarSelectedBtnSuccess;
 
 @end
