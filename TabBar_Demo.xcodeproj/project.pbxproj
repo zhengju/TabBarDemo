@@ -17,7 +17,6 @@
 		1803F8C81CF555970065AE93 /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C11CF555970065AE93 /* ZJTabBar.m */; };
 		1803F8C91CF555970065AE93 /* ZJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C31CF555970065AE93 /* ZJTabBarButton.m */; };
 		1803F8CA1CF555970065AE93 /* ZJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C51CF555970065AE93 /* ZJTabBarController.m */; };
-		1803F8CB1CF555970065AE93 /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C71CF555970065AE93 /* ZJNavigationController.m */; };
 		188C54291DDEAE130016705B /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C54271DDEAE130016705B /* MyTabBarController.m */; };
 		189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECB971DD1EB5D00DBBB2F /* SuperController.m */; };
 		189ECB9A1DD1EB5D00DBBB2F /* SuperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECB981DD1EB5D00DBBB2F /* SuperController.xib */; };
@@ -27,6 +26,7 @@
 		189ECBA41DD1EB8800DBBB2F /* ServiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECBA21DD1EB8800DBBB2F /* ServiceController.xib */; };
 		189ECBA81DD1EB9600DBBB2F /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECBA61DD1EB9600DBBB2F /* MeController.m */; };
 		189ECBA91DD1EB9600DBBB2F /* MeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECBA71DD1EB9600DBBB2F /* MeController.xib */; };
+		18A0E94F1F624DB700675FDD /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E94D1F624DB700675FDD /* ZJNavigationController.m */; };
 		18E181151DD2BB4A00F73D3A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181131DD2BB4A00F73D3A /* LoginController.m */; };
 		18E181161DD2BB4A00F73D3A /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E181141DD2BB4A00F73D3A /* LoginController.xib */; };
 		18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181181DD2BD5300F73D3A /* SetupController.m */; };
@@ -71,8 +71,6 @@
 		1803F8C31CF555970065AE93 /* ZJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarButton.m; sourceTree = "<group>"; };
 		1803F8C41CF555970065AE93 /* ZJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarController.h; sourceTree = "<group>"; };
 		1803F8C51CF555970065AE93 /* ZJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarController.m; sourceTree = "<group>"; };
-		1803F8C61CF555970065AE93 /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
-		1803F8C71CF555970065AE93 /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
 		188C54261DDEAE130016705B /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
 		188C54271DDEAE130016705B /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
 		189ECB961DD1EB5D00DBBB2F /* SuperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperController.h; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		189ECBA51DD1EB9600DBBB2F /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
 		189ECBA61DD1EB9600DBBB2F /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
 		189ECBA71DD1EB9600DBBB2F /* MeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeController.xib; sourceTree = "<group>"; };
+		18A0E94D1F624DB700675FDD /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
+		18A0E94E1F624DB700675FDD /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
 		18E181121DD2BB4A00F73D3A /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		18E181131DD2BB4A00F73D3A /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		18E181141DD2BB4A00F73D3A /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 				1803F8C31CF555970065AE93 /* ZJTabBarButton.m */,
 				1803F8C41CF555970065AE93 /* ZJTabBarController.h */,
 				1803F8C51CF555970065AE93 /* ZJTabBarController.m */,
-				1803F8C61CF555970065AE93 /* ZJNavigationController.h */,
-				1803F8C71CF555970065AE93 /* ZJNavigationController.m */,
+				18A0E94D1F624DB700675FDD /* ZJNavigationController.m */,
+				18A0E94E1F624DB700675FDD /* ZJNavigationController.h */,
 			);
 			name = TabBar;
 			sourceTree = "<group>";
@@ -449,7 +449,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1803F8CB1CF555970065AE93 /* ZJNavigationController.m in Sources */,
 				1803F8C91CF555970065AE93 /* ZJTabBarButton.m in Sources */,
 				1803F8921CF554A70065AE93 /* AppDelegate.m in Sources */,
 				188C54291DDEAE130016705B /* MyTabBarController.m in Sources */,
@@ -462,6 +461,7 @@
 				189ECBA31DD1EB8800DBBB2F /* ServiceController.m in Sources */,
 				189ECB9E1DD1EB7400DBBB2F /* HomeController.m in Sources */,
 				189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */,
+				18A0E94F1F624DB700675FDD /* ZJNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
