@@ -14,9 +14,6 @@
 		1803F89D1CF554A70065AE93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1803F89B1CF554A70065AE93 /* LaunchScreen.storyboard */; };
 		1803F8A81CF554A70065AE93 /* TabBar_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8A71CF554A70065AE93 /* TabBar_DemoTests.m */; };
 		1803F8B31CF554A70065AE93 /* TabBar_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8B21CF554A70065AE93 /* TabBar_DemoUITests.m */; };
-		1803F8C81CF555970065AE93 /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C11CF555970065AE93 /* ZJTabBar.m */; };
-		1803F8C91CF555970065AE93 /* ZJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C31CF555970065AE93 /* ZJTabBarButton.m */; };
-		1803F8CA1CF555970065AE93 /* ZJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1803F8C51CF555970065AE93 /* ZJTabBarController.m */; };
 		188C54291DDEAE130016705B /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C54271DDEAE130016705B /* MyTabBarController.m */; };
 		189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECB971DD1EB5D00DBBB2F /* SuperController.m */; };
 		189ECB9A1DD1EB5D00DBBB2F /* SuperController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECB981DD1EB5D00DBBB2F /* SuperController.xib */; };
@@ -26,7 +23,10 @@
 		189ECBA41DD1EB8800DBBB2F /* ServiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECBA21DD1EB8800DBBB2F /* ServiceController.xib */; };
 		189ECBA81DD1EB9600DBBB2F /* MeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ECBA61DD1EB9600DBBB2F /* MeController.m */; };
 		189ECBA91DD1EB9600DBBB2F /* MeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189ECBA71DD1EB9600DBBB2F /* MeController.xib */; };
-		18A0E94F1F624DB700675FDD /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E94D1F624DB700675FDD /* ZJNavigationController.m */; };
+		18A0E9591F624E6600675FDD /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9521F624E6600675FDD /* ZJNavigationController.m */; };
+		18A0E95A1F624E6600675FDD /* ZJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9541F624E6600675FDD /* ZJTabBar.m */; };
+		18A0E95B1F624E6600675FDD /* ZJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9561F624E6600675FDD /* ZJTabBarButton.m */; };
+		18A0E95C1F624E6600675FDD /* ZJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E9581F624E6600675FDD /* ZJTabBarController.m */; };
 		18E181151DD2BB4A00F73D3A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181131DD2BB4A00F73D3A /* LoginController.m */; };
 		18E181161DD2BB4A00F73D3A /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E181141DD2BB4A00F73D3A /* LoginController.xib */; };
 		18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181181DD2BD5300F73D3A /* SetupController.m */; };
@@ -65,12 +65,6 @@
 		1803F8AE1CF554A70065AE93 /* TabBar_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBar_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1803F8B21CF554A70065AE93 /* TabBar_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBar_DemoUITests.m; sourceTree = "<group>"; };
 		1803F8B41CF554A70065AE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1803F8C01CF555970065AE93 /* ZJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBar.h; sourceTree = "<group>"; };
-		1803F8C11CF555970065AE93 /* ZJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBar.m; sourceTree = "<group>"; };
-		1803F8C21CF555970065AE93 /* ZJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarButton.h; sourceTree = "<group>"; };
-		1803F8C31CF555970065AE93 /* ZJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarButton.m; sourceTree = "<group>"; };
-		1803F8C41CF555970065AE93 /* ZJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarController.h; sourceTree = "<group>"; };
-		1803F8C51CF555970065AE93 /* ZJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarController.m; sourceTree = "<group>"; };
 		188C54261DDEAE130016705B /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
 		188C54271DDEAE130016705B /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
 		189ECB961DD1EB5D00DBBB2F /* SuperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperController.h; sourceTree = "<group>"; };
@@ -85,8 +79,14 @@
 		189ECBA51DD1EB9600DBBB2F /* MeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeController.h; sourceTree = "<group>"; };
 		189ECBA61DD1EB9600DBBB2F /* MeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeController.m; sourceTree = "<group>"; };
 		189ECBA71DD1EB9600DBBB2F /* MeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeController.xib; sourceTree = "<group>"; };
-		18A0E94D1F624DB700675FDD /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
-		18A0E94E1F624DB700675FDD /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
+		18A0E9511F624E6600675FDD /* ZJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationController.h; sourceTree = "<group>"; };
+		18A0E9521F624E6600675FDD /* ZJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationController.m; sourceTree = "<group>"; };
+		18A0E9531F624E6600675FDD /* ZJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBar.h; sourceTree = "<group>"; };
+		18A0E9541F624E6600675FDD /* ZJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBar.m; sourceTree = "<group>"; };
+		18A0E9551F624E6600675FDD /* ZJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarButton.h; sourceTree = "<group>"; };
+		18A0E9561F624E6600675FDD /* ZJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarButton.m; sourceTree = "<group>"; };
+		18A0E9571F624E6600675FDD /* ZJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTabBarController.h; sourceTree = "<group>"; };
+		18A0E9581F624E6600675FDD /* ZJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTabBarController.m; sourceTree = "<group>"; };
 		18E181121DD2BB4A00F73D3A /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		18E181131DD2BB4A00F73D3A /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		18E181141DD2BB4A00F73D3A /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		1803F88C1CF554A70065AE93 /* TabBar_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				188C54251DDE9A710016705B /* TabBar */,
+				18A0E9501F624E6600675FDD /* ZJTabBar */,
 				189ECB921DD1EAF200DBBB2F /* HomePage */,
 				189ECB8E1DD1EAEB00DBBB2F /* Service */,
 				189ECB8A1DD1EAE400DBBB2F /* Me */,
@@ -190,21 +190,6 @@
 				1803F8B41CF554A70065AE93 /* Info.plist */,
 			);
 			path = TabBar_DemoUITests;
-			sourceTree = "<group>";
-		};
-		188C54251DDE9A710016705B /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				1803F8C01CF555970065AE93 /* ZJTabBar.h */,
-				1803F8C11CF555970065AE93 /* ZJTabBar.m */,
-				1803F8C21CF555970065AE93 /* ZJTabBarButton.h */,
-				1803F8C31CF555970065AE93 /* ZJTabBarButton.m */,
-				1803F8C41CF555970065AE93 /* ZJTabBarController.h */,
-				1803F8C51CF555970065AE93 /* ZJTabBarController.m */,
-				18A0E94D1F624DB700675FDD /* ZJNavigationController.m */,
-				18A0E94E1F624DB700675FDD /* ZJNavigationController.h */,
-			);
-			name = TabBar;
 			sourceTree = "<group>";
 		};
 		189ECB8A1DD1EAE400DBBB2F /* Me */ = {
@@ -310,6 +295,21 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18A0E9501F624E6600675FDD /* ZJTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				18A0E9511F624E6600675FDD /* ZJNavigationController.h */,
+				18A0E9521F624E6600675FDD /* ZJNavigationController.m */,
+				18A0E9531F624E6600675FDD /* ZJTabBar.h */,
+				18A0E9541F624E6600675FDD /* ZJTabBar.m */,
+				18A0E9551F624E6600675FDD /* ZJTabBarButton.h */,
+				18A0E9561F624E6600675FDD /* ZJTabBarButton.m */,
+				18A0E9571F624E6600675FDD /* ZJTabBarController.h */,
+				18A0E9581F624E6600675FDD /* ZJTabBarController.m */,
+			);
+			path = ZJTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,19 +449,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1803F8C91CF555970065AE93 /* ZJTabBarButton.m in Sources */,
 				1803F8921CF554A70065AE93 /* AppDelegate.m in Sources */,
 				188C54291DDEAE130016705B /* MyTabBarController.m in Sources */,
-				1803F8CA1CF555970065AE93 /* ZJTabBarController.m in Sources */,
 				18E181151DD2BB4A00F73D3A /* LoginController.m in Sources */,
 				189ECBA81DD1EB9600DBBB2F /* MeController.m in Sources */,
 				1803F88F1CF554A70065AE93 /* main.m in Sources */,
 				18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */,
-				1803F8C81CF555970065AE93 /* ZJTabBar.m in Sources */,
 				189ECBA31DD1EB8800DBBB2F /* ServiceController.m in Sources */,
+				18A0E9591F624E6600675FDD /* ZJNavigationController.m in Sources */,
+				18A0E95A1F624E6600675FDD /* ZJTabBar.m in Sources */,
 				189ECB9E1DD1EB7400DBBB2F /* HomeController.m in Sources */,
+				18A0E95C1F624E6600675FDD /* ZJTabBarController.m in Sources */,
 				189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */,
-				18A0E94F1F624DB700675FDD /* ZJNavigationController.m in Sources */,
+				18A0E95B1F624E6600675FDD /* ZJTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
