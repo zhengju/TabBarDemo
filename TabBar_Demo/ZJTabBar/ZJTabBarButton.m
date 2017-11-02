@@ -1,11 +1,31 @@
 
- 
-//封装button
-#define IWTabBarButtonImageRatio 0.6
 #import "ZJTabBarButton.h"
 
-#import "ZJTabBarItem.h"
+@interface ZJTabBarNormalBtn()
 
+@end
+@implementation ZJTabBarNormalBtn
+
+-(CGRect)imageRectForContentRect:(CGRect)contentRect{
+    CGFloat imageW=contentRect.size.width;
+    CGFloat imageH=contentRect.size.height * 0.8;
+    return CGRectMake(0, contentRect.size.height * 0.1, imageW , imageH);
+}
+
+//内部文字的frame
+-(CGRect)titleRectForContentRect:(CGRect)contentRect{
+//    CGFloat titleY = contentRect.size.height*ZJTabBarButtonImageRatio;
+//    CGFloat titleW = contentRect.size.width;
+//    CGFloat titleH = contentRect.size.height-titleY;
+    return CGRectMake(0, 0, 0, 0);
+}
+
+@end
+
+//封装button
+
+
+#import "ZJTabBarItem.h"
 #pragma mark - 颜色值
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 @interface ZJTabBarButton()
@@ -16,13 +36,13 @@
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
     CGFloat imageW=contentRect.size.width;
-     CGFloat imageH=contentRect.size.height*IWTabBarButtonImageRatio;
+     CGFloat imageH=contentRect.size.height*ZJTabBarButtonImageRatio;
     return CGRectMake(0, 0, imageW , imageH);
 }
 
 //内部文字的frame
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
-    CGFloat titleY = contentRect.size.height*IWTabBarButtonImageRatio;
+    CGFloat titleY = contentRect.size.height*ZJTabBarButtonImageRatio;
     CGFloat titleW = contentRect.size.width;
     CGFloat titleH = contentRect.size.height-titleY;
     return CGRectMake(0, titleY, titleW, titleH);

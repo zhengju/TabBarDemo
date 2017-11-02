@@ -2,7 +2,6 @@
 
 #import "ZJTabBar.h"
 #import "ZJTabBarButton.h"
-
 #import "ZJNavigationController.h"
 
 @interface ZJTabBar()
@@ -32,10 +31,21 @@
     
     return myTabBar;
 }
+- (instancetype)init{
+    if (self = [super init]) {
+        self.separateBtnIndex = 0;
+    }
+    return self;
+}
 -(void)addTabBarButtonWithItem:(ZJTabBarItem *)item{
     //1、创建按钮
-    ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
+     ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
     
+    //判断是否添加中间为大按钮
+    if (self.tabBarButtons.count == _separateBtnIndex && _separateBtnIndex != 0) {
+         button=[[ZJTabBarNormalBtn alloc]init];
+    }
+
     [self addSubview:button];
     
     //添加按钮到数组中
@@ -107,13 +117,12 @@
         ZJTabBarButton *button = self.tabBarButtons[index];
         
         CGFloat buttonX = index*buttonW;
-        
+
         button.frame=CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         button.tag=index;
         
     }
 }
-
 
 @end

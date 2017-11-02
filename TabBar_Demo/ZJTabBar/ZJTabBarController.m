@@ -21,6 +21,10 @@
 - (void)setIsIntercept:(BOOL)isIntercept{
     _isIntercept = isIntercept;
 }
+- (void)setSeparateBtnIndex:(int)separateBtnIndex{
+    _separateBtnIndex = separateBtnIndex;
+    
+}
 + (void)initialize{
     
     UITabBar * tabBar = [UITabBar appearance];
@@ -86,9 +90,12 @@
     ZJTabBar *customTabBar=[ZJTabBar shareTabBar];
     
     
+    
     customTabBar.frame=self.tabBar.bounds;
     
     self.customTabBar=customTabBar;
+    
+    self.customTabBar.separateBtnIndex = _separateBtnIndex;
     
     customTabBar.delegate=self;
     

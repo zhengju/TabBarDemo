@@ -22,7 +22,10 @@
  被选中的按钮的位置
  */
 @property(nonatomic)NSInteger selectedIndex;
-
+/**
+ 做单独的按钮，显示在中间位置 ，两边程对称趋势
+ */
+@property(assign,nonatomic) int  separateBtnIndex;
 /**
  添加按钮元素
 

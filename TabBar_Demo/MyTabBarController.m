@@ -19,11 +19,16 @@
 @implementation MyTabBarController
 
 - (void)viewDidLoad {
+    
+    self.separateBtnIndex = 2;
+    
     [super viewDidLoad];
     
-    self.isIntercept = YES;
-   
-    self.defaultSelectedIndex = 1;
+    
+    
+    //self.isIntercept = YES;
+
+    self.defaultSelectedIndex = 0;
     
 }
 -(void)setUPAllChildViewController{
@@ -36,6 +41,16 @@
                                  
                                  @{kClassKey  : @"ServiceController",
                                    kTitleKey  : @"购物车",
+                                   kImgKey    : @"fuwu",
+                                   kSelImgKey : @"fuwuxuanzhong"},
+                                 
+                                 @{kClassKey  : @"AddNewController",
+                                   kTitleKey  : @"添加",
+                                   kImgKey    : @"添加",
+                                   kSelImgKey : @"添加"},
+                                 
+                                 @{kClassKey  : @"MessagesController",
+                                   kTitleKey  : @"消息",
                                    kImgKey    : @"fuwu",
                                    kSelImgKey : @"fuwuxuanzhong"},
                                  
@@ -60,7 +75,7 @@
 - (void)tabBarDidselectedButtonFrom:(int)from to:(int)to block:(void (^)())success_block{
     
 
-    [self interceptIndex:1 setSuccessBlock:^{
+    [self interceptIndex:2 setSuccessBlock:^{
       
         
             LoginController * controller = [[LoginController alloc]init];

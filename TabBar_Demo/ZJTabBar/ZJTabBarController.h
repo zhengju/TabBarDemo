@@ -31,7 +31,10 @@ static ZJTabBarController * tabar = nil;
  是否做拦截
  */
 @property(assign,nonatomic) BOOL  isIntercept;
-
+/**
+ 做单独的按钮，显示在中间位置 ，两边程对称趋势,此属性必须写在 [super viewDidLoad];之前，因为要提前赋值
+ */
+@property(assign,nonatomic) int  separateBtnIndex;
 
 @property (nonatomic,strong) NSArray *childItemsArray;
 /**

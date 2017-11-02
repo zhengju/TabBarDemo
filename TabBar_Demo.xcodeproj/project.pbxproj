@@ -29,6 +29,10 @@
 		18E181161DD2BB4A00F73D3A /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E181141DD2BB4A00F73D3A /* LoginController.xib */; };
 		18E1811A1DD2BD5300F73D3A /* SetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E181181DD2BD5300F73D3A /* SetupController.m */; };
 		18E1811B1DD2BD5300F73D3A /* SetupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E181191DD2BD5300F73D3A /* SetupController.xib */; };
+		18F27BAB1FAB1E760007EEA6 /* AddNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F27BA91FAB1E760007EEA6 /* AddNewController.m */; };
+		18F27BAC1FAB1E760007EEA6 /* AddNewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F27BAA1FAB1E760007EEA6 /* AddNewController.xib */; };
+		18F27BB01FAB1E890007EEA6 /* MessagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F27BAE1FAB1E890007EEA6 /* MessagesController.m */; };
+		18F27BB11FAB1E890007EEA6 /* MessagesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F27BAF1FAB1E890007EEA6 /* MessagesController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,12 @@
 		18E181171DD2BD5300F73D3A /* SetupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupController.h; sourceTree = "<group>"; };
 		18E181181DD2BD5300F73D3A /* SetupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupController.m; sourceTree = "<group>"; };
 		18E181191DD2BD5300F73D3A /* SetupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupController.xib; sourceTree = "<group>"; };
+		18F27BA81FAB1E760007EEA6 /* AddNewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewController.h; sourceTree = "<group>"; };
+		18F27BA91FAB1E760007EEA6 /* AddNewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewController.m; sourceTree = "<group>"; };
+		18F27BAA1FAB1E760007EEA6 /* AddNewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewController.xib; sourceTree = "<group>"; };
+		18F27BAD1FAB1E890007EEA6 /* MessagesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesController.h; sourceTree = "<group>"; };
+		18F27BAE1FAB1E890007EEA6 /* MessagesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessagesController.m; sourceTree = "<group>"; };
+		18F27BAF1FAB1E890007EEA6 /* MessagesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				18A0E9501F624E6600675FDD /* ZJTabBar */,
+				18F27BA61FAB1E530007EEA6 /* AddNew */,
+				18F27BA71FAB1E530007EEA6 /* Messages */,
 				189ECB921DD1EAF200DBBB2F /* HomePage */,
 				189ECB8E1DD1EAEB00DBBB2F /* Service */,
 				189ECB8A1DD1EAE400DBBB2F /* Me */,
@@ -288,6 +300,28 @@
 			path = ZJTabBar;
 			sourceTree = "<group>";
 		};
+		18F27BA61FAB1E530007EEA6 /* AddNew */ = {
+			isa = PBXGroup;
+			children = (
+				18F27BA81FAB1E760007EEA6 /* AddNewController.h */,
+				18F27BA91FAB1E760007EEA6 /* AddNewController.m */,
+				18F27BAA1FAB1E760007EEA6 /* AddNewController.xib */,
+			);
+			name = AddNew;
+			path = TabBar_Demo/AddNew;
+			sourceTree = SOURCE_ROOT;
+		};
+		18F27BA71FAB1E530007EEA6 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				18F27BAD1FAB1E890007EEA6 /* MessagesController.h */,
+				18F27BAE1FAB1E890007EEA6 /* MessagesController.m */,
+				18F27BAF1FAB1E890007EEA6 /* MessagesController.xib */,
+			);
+			name = Messages;
+			path = TabBar_Demo/Messages;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,8 +428,10 @@
 			files = (
 				1803F89D1CF554A70065AE93 /* LaunchScreen.storyboard in Resources */,
 				18E181161DD2BB4A00F73D3A /* LoginController.xib in Resources */,
+				18F27BAC1FAB1E760007EEA6 /* AddNewController.xib in Resources */,
 				18E1811B1DD2BD5300F73D3A /* SetupController.xib in Resources */,
 				1803F89A1CF554A70065AE93 /* Assets.xcassets in Resources */,
+				18F27BB11FAB1E890007EEA6 /* MessagesController.xib in Resources */,
 				1803F8981CF554A70065AE93 /* Main.storyboard in Resources */,
 				189ECB9F1DD1EB7400DBBB2F /* HomeController.xib in Resources */,
 				189ECBA91DD1EB9600DBBB2F /* MeController.xib in Resources */,
@@ -435,6 +471,8 @@
 				18A0E95F1F6251F600675FDD /* ZJTabBarItem.m in Sources */,
 				18A0E95A1F624E6600675FDD /* ZJTabBar.m in Sources */,
 				189ECB9E1DD1EB7400DBBB2F /* HomeController.m in Sources */,
+				18F27BB01FAB1E890007EEA6 /* MessagesController.m in Sources */,
+				18F27BAB1FAB1E760007EEA6 /* AddNewController.m in Sources */,
 				18A0E95C1F624E6600675FDD /* ZJTabBarController.m in Sources */,
 				189ECB991DD1EB5D00DBBB2F /* SuperController.m in Sources */,
 				18A0E95B1F624E6600675FDD /* ZJTabBarButton.m in Sources */,
