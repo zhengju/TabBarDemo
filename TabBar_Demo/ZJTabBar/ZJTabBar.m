@@ -43,7 +43,9 @@
     
     //判断是否添加中间为大按钮
     if (self.tabBarButtons.count == _separateBtnIndex && _separateBtnIndex != 0) {
+        
          button=[[ZJTabBarNormalBtn alloc]init];
+        
     }
 
     [self addSubview:button];
