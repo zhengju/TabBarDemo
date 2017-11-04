@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-    s.name         = 'ZJTabBar'
+    s.name         = 'TabBarDemo'
     s.version      = '1.0.0'
     s.summary      = 'An easy way to use TabBarController'
     s.homepage     = 'https://github.com/zhengju/TabBarDemo'
