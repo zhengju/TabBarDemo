@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.authors      = {'ZJ Zheng' => '2824816064@qq.com'}
     s.platform     = :ios, '6.0'
     s.source       = {:git => 'https://github.com/zhengju/TabBarDemo.git', :tag => s.version}
-    s.source_files = 'TabBar_Demo/**/*.{h,m}'
+    s.source_files = 'TabBar_Demo/ZJTabBar/**/*.{h,m}’
     
     s.requires_arc = true
 end
