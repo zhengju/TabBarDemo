@@ -1,2 +1,2 @@
 # TabBarDemo
-提交代码
+具体使用方法见demo
