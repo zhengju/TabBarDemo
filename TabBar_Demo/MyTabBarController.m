@@ -22,6 +22,9 @@
     
     self.separateBtnIndex = 2;
     
+    //是否超出tabBar
+    self.isSeparateBtnHit = YES;
+    
     [super viewDidLoad];
     
     

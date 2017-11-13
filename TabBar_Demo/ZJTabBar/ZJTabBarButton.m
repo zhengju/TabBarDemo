@@ -14,11 +14,10 @@
 
 //内部文字的frame
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
-//    CGFloat titleY = contentRect.size.height*ZJTabBarButtonImageRatio;
-//    CGFloat titleW = contentRect.size.width;
-//    CGFloat titleH = contentRect.size.height-titleY;
+
     return CGRectMake(0, 0, 0, 0);
 }
+
 
 @end
 

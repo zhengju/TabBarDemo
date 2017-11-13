@@ -49,7 +49,7 @@
     }
 
     [self addSubview:button];
-    
+
     //添加按钮到数组中
     [self.tabBarButtons addObject:button];
     
@@ -124,7 +124,28 @@
         
         button.tag=index;
         
+        //判断是否添加中间为大按钮
+        if (index == _separateBtnIndex && _separateBtnIndex != 0 && self.isSeparateBtnHit == YES) {
+             button.frame=CGRectMake(buttonX, -60, buttonW, buttonH + 60);
+            
+        }
     }
 }
+/**
+ 重写事件
+ */
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
+    UIView *result = [super hitTest:point withEvent:event];
+
+    ZJTabBarNormalBtn * button = self.tabBarButtons[_separateBtnIndex];
+
+    CGPoint buttonPoint = [button convertPoint:point fromView:self];
+    if ([button pointInside:buttonPoint withEvent:event]) {
+        return button;
+    }
+    return result;
+}
+
 
 @end

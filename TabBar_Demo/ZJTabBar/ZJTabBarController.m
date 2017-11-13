@@ -25,13 +25,20 @@
     _separateBtnIndex = separateBtnIndex;
     
 }
+- (void)setIsSeparateBtnHit:(BOOL)isSeparateBtnHit{
+    _isSeparateBtnHit = isSeparateBtnHit;
+    
+}
 + (void)initialize{
+
+    [super initialize];
     
     UITabBar * tabBar = [UITabBar appearance];
-    
+
     tabBar.backgroundImage = [UIImage imageNamed:@"tabella-beijing"];
-    tabBar.backgroundColor = [UIColor whiteColor];
     
+    tabBar.backgroundColor = [UIColor whiteColor];
+  
 }
 + (instancetype )shareTabar{
     if (!tabar) {
@@ -88,18 +95,16 @@
 -(void)setupTabBar{
     
     ZJTabBar *customTabBar=[ZJTabBar shareTabBar];
-    
-    
-    
-    customTabBar.frame=self.tabBar.bounds;
-    
+
+    customTabBar.frame=self.tabBar.frame;
+  
     self.customTabBar=customTabBar;
     
     self.customTabBar.separateBtnIndex = _separateBtnIndex;
-    
+    self.customTabBar.isSeparateBtnHit = self.isSeparateBtnHit;
     customTabBar.delegate=self;
     
-    [self.tabBar addSubview:customTabBar];
+    [self.view addSubview:customTabBar];
     
 }
 
@@ -195,4 +200,5 @@
 - (void)tabBarSelectedBtnSuccess{
     [self tabBarSelectedBtnSuccess:_toIndex];
 }
+
 @end

@@ -27,6 +27,10 @@
  */
 @property(assign,nonatomic) int  separateBtnIndex;
 /**
+ 单独的按钮是否超出tabBar
+ */
+@property(assign,nonatomic) BOOL  isSeparateBtnHit;
+/**
  添加按钮元素
 
  @param item UITabBarItem ，携带配置信息

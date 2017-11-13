@@ -11,8 +11,6 @@ static ZJTabBarController * tabar = nil;
 
 @interface ZJTabBarController : UITabBarController
 
-
-
 //地航栏按钮设置
 /**
  未选中字体颜色
@@ -35,6 +33,10 @@ static ZJTabBarController * tabar = nil;
  做单独的按钮，显示在中间位置 ，两边程对称趋势,此属性必须写在 [super viewDidLoad];之前，因为要提前赋值
  */
 @property(assign,nonatomic) int  separateBtnIndex;
+/**
+ 单独的按钮是否超出tabBar
+ */
+@property(assign,nonatomic) BOOL  isSeparateBtnHit;
 
 @property (nonatomic,strong) NSArray *childItemsArray;
 /**
