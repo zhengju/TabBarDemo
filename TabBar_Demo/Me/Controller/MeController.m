@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    self.title = @"我的";
+    self.backBtn.hidden = YES;
 }
 - (IBAction)setUpClick:(UIButton *)sender {
     SetupController * setupController = [[SetupController alloc]init];

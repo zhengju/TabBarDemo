@@ -9,10 +9,6 @@
 #import "ZJTabBarButton.h"
 
 @interface ZJTabBarController ()<ZJTabBarDetagate>
-{
-    int _toIndex;
-}
-
 
 @property(nonatomic,weak)ZJTabBar *customTabBar;
 @end
@@ -38,7 +34,7 @@
     tabBar.backgroundImage = [UIImage imageNamed:@"tabella-beijing"];
     
     tabBar.backgroundColor = [UIColor whiteColor];
-  
+
 }
 + (instancetype )shareTabar{
     if (!tabar) {
@@ -96,15 +92,15 @@
     
     ZJTabBar *customTabBar=[ZJTabBar shareTabBar];
 
-    customTabBar.frame=self.tabBar.frame;
-  
+    customTabBar.frame= CGRectMake(0, 0, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
+    
     self.customTabBar=customTabBar;
     
     self.customTabBar.separateBtnIndex = _separateBtnIndex;
     self.customTabBar.isSeparateBtnHit = self.isSeparateBtnHit;
     customTabBar.delegate=self;
     
-    [self.view addSubview:customTabBar];
+    [self.tabBar addSubview:customTabBar];
     
 }
 
@@ -119,28 +115,16 @@
     
 }
 
-- (void)interceptIndex:(int)index setSuccessBlock:(void(^)())success_block{
-    
-    if (_toIndex == index) {//弹出登录界面
-        success_block();
-        
-    }else{
-        
-        [self tabBarSelectedBtnSuccess:_toIndex];
-    }
-}
-
 //监听按的改变
 - (void)tabBar:(ZJTabBar *)tabBar didselectedButtonFrom:(int)from to:(int)to{
-    
-    if ([self respondsToSelector:@selector(tabBarDidselectedButtonFrom:to:block:)] && _isIntercept) {//同时为真，才做拦截
-        
-        _toIndex = to;
-        
-        [self tabBarDidselectedButtonFrom:from to:to block:^{
-            [self tabBarSelectedBtnSuccess];
-        }];
-        
+
+    if ([self respondsToSelector:@selector(tabBarDidselectedButtonFrom:to:block:)] && _isIntercept && to == self.interceptIndex) {//同时为真，才做拦截
+
+            [self tabBarDidselectedButtonFrom:from to:to block:^{
+              
+                [self tabBarSelectedBtnSuccess:to];
+            }];
+
     }else{
         
         [self tabBarSelectedBtnSuccess:to];
@@ -196,9 +180,6 @@
 - (void)tabBarSelectedBtnSuccess:(int)to{
     self.selectedIndex=to;
     [self.customTabBar selectedSuccess];
-}
-- (void)tabBarSelectedBtnSuccess{
-    [self tabBarSelectedBtnSuccess:_toIndex];
 }
 
 @end

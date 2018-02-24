@@ -21,15 +21,13 @@
 - (void)viewDidLoad {
     
     self.separateBtnIndex = 2;
-    
+    self.interceptIndex = 3;
     //是否超出tabBar
-    self.isSeparateBtnHit = YES;
+    //self.isSeparateBtnHit = YES;
     
     [super viewDidLoad];
-    
-    
-    
-    //self.isIntercept = YES;
+
+    self.isIntercept = YES;
 
     self.defaultSelectedIndex = 0;
     
@@ -76,24 +74,19 @@
 
 }
 - (void)tabBarDidselectedButtonFrom:(int)from to:(int)to block:(void (^)())success_block{
-    
 
-    [self interceptIndex:2 setSuccessBlock:^{
-      
+    
+    LoginController * controller = [[LoginController alloc]init];
+    
+    ZJNavigationController * nav = [[ZJNavigationController alloc]initWithRootViewController:controller];;
+
+    controller.loginSuccessBlock = ^(){//登录ok的回调
+
+        success_block();
         
-            LoginController * controller = [[LoginController alloc]init];
-            ZJNavigationController * nav = [[ZJNavigationController alloc]initWithRootViewController:controller];;
-            
-          
-            controller.loginSuccessBlock = ^(){//登录ok的回调
-                
-                [self tabBarSelectedBtnSuccess:to];
-            };
-            
-            [self presentViewController:nav animated:YES completion:nil];
-//        }else{
-//            success_block();//封装
-//        }
-    }];
+    };
+
+    [self presentViewController:nav animated:YES completion:nil];
+
 }
 @end

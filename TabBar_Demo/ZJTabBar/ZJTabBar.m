@@ -26,14 +26,14 @@
     //&predicate这个断言的指针必须要全局化的保存，或者放在静态区内。使用存放在自动分配区域或者动态区域的断言，dispatch_once执行的结果是不可预知的。
     dispatch_once(&predicate, ^{
         myTabBar = [[ZJTabBar alloc]init];
-        
+       
     });
     
     return myTabBar;
 }
 - (instancetype)init{
     if (self = [super init]) {
-        self.separateBtnIndex = 0;
+        self.separateBtnIndex = 0;//给定一个默认值
     }
     return self;
 }
@@ -69,7 +69,15 @@
     if ((_selectedIndex < self.tabBarButtons.count) && self.tabBarButtons.count > 0) {
         _selectedIndex = selectedIndex;
         _index = _selectedIndex;
-        ZJTabBarButton * button = [self.tabBarButtons objectAtIndex:_selectedIndex];
+        ZJTabBarButton * button = nil;
+        if (_selectedIndex >= [self.tabBarButtons count]) {
+    
+            button = [self.tabBarButtons lastObject];
+        }else{
+           
+            button = [self.tabBarButtons objectAtIndex:_selectedIndex];
+        }
+        
         
         [self buttonClick:button];
     }
@@ -138,14 +146,23 @@
 
     UIView *result = [super hitTest:point withEvent:event];
 
-    ZJTabBarNormalBtn * button = self.tabBarButtons[_separateBtnIndex];
-
-    CGPoint buttonPoint = [button convertPoint:point fromView:self];
-    if ([button pointInside:buttonPoint withEvent:event]) {
-        return button;
+    if (result == nil) {
+        ZJTabBarNormalBtn * button = self.tabBarButtons[_separateBtnIndex];
+        
+        CGPoint buttonPoint = [button convertPoint:point fromView:self];
+        
+        if ([button pointInside:buttonPoint withEvent:event]) {
+            result = button;
+        }
     }
+    
+   
     return result;
 }
 
+//- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+//    return NO;
+//
+//}
 
 @end
