@@ -63,7 +63,12 @@
     self.selectedIndex = 0;
     _index = 0;
 }
-
+-(void)switchTabBarButtonWithItem:(ZJTabBarItem *)item atIndex:(NSInteger)index{
+    if (index < [self.tabBarButtons count]) {
+        ZJTabBarButton *button = self.tabBarButtons[index];
+        button.item = item;
+    }
+}
 - (void)setSelectedIndex:(NSInteger)selectedIndex{
     
     if ((_selectedIndex < self.tabBarButtons.count) && self.tabBarButtons.count > 0) {

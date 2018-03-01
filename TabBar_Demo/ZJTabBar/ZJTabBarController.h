@@ -64,6 +64,11 @@ static ZJTabBarController * tabar = nil;
 @property(assign,nonatomic) BOOL  isSeparateBtnHit;
 
 /**
+ 是否切换主题，默认是NO
+ */
+@property(assign,nonatomic) BOOL  isSwitchingTheme;
+
+/**
  控制器数组
  */
 @property (nonatomic,strong) NSArray *childItemsArray;
@@ -73,7 +78,5 @@ static ZJTabBarController * tabar = nil;
 @property(nonatomic)NSInteger defaultSelectedIndex;
 
 + (instancetype )shareTabar;
-
-
 
 @end

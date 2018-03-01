@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,18 +20,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goh-uu-sK1">
+                    <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
                     <state key="normal" title="退出登陆"/>
                     <connections>
                         <action selector="logoutClick:" destination="-1" eventType="touchUpInside" id="LfE-w1-m2l"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-y0-fg1">
+                    <rect key="frame" x="61" y="191" width="62" height="30"/>
+                    <state key="normal" title="正常主题"/>
+                    <connections>
+                        <action selector="normalItemClick:" destination="-1" eventType="touchUpInside" id="kGV-fv-JAW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXv-Lv-0Iy">
+                    <rect key="frame" x="57" y="241" width="62" height="30"/>
+                    <state key="normal" title="红色主题">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="redItemClick:" destination="-1" eventType="touchUpInside" id="JfK-gl-OZd"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Goh-uu-sK1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JRj-jZ-OPz"/>
+                <constraint firstItem="vXv-Lv-0Iy" firstAttribute="top" secondItem="Nsf-y0-fg1" secondAttribute="bottom" constant="20" id="hdo-Mk-K9E"/>
+                <constraint firstItem="Nsf-y0-fg1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="191" id="jnU-Vs-90q"/>
                 <constraint firstItem="Goh-uu-sK1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mSN-TO-ZYI"/>
+                <constraint firstItem="vXv-Lv-0Iy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="qh2-aI-Ngh"/>
+                <constraint firstItem="Nsf-y0-fg1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="rFR-mi-3J5"/>
             </constraints>
-            <point key="canvasLocation" x="575" y="-22"/>
+            <point key="canvasLocation" x="339.5" y="-83.5"/>
         </view>
     </objects>
 </document>

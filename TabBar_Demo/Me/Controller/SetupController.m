@@ -17,12 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置";
-    
 }
+
 - (IBAction)logoutClick:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
     
 }
+- (IBAction)normalItemClick:(UIButton *)sender {
+  
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"switchingTheme" object:nil userInfo:@{@"item":@"normal"}];
+}
 
+- (IBAction)redItemClick:(UIButton *)sender {
+  
+     [[NSNotificationCenter defaultCenter]postNotificationName:@"switchingTheme" object:nil userInfo:@{@"item":@"red"}];
+}
 
 @end

@@ -8,6 +8,9 @@
 #import "ZJTabBarItem.h"
 #import "ZJTabBarButton.h"
 
+static NSString * SWITCHINGTHEME = @"switchingTheme";
+
+
 @interface ZJTabBarController ()<ZJTabBarDetagate>
 
 @property(nonatomic,weak)ZJTabBar *customTabBar;
@@ -54,6 +57,7 @@
     [self setupTabBar];
     //添加自控制器
     [self setUPAllChildViewController];
+    [self setNotifinotion];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -130,7 +134,28 @@
         [self tabBarSelectedBtnSuccess:to];
     }
 }
-
+- (void)setNotifinotion{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(switchingThemeNotification:) name:SWITCHINGTHEME object:nil];
+}
+- (void)switchingThemeNotification:(NSNotification *)notification{
+    NSArray * itemsArray = nil;
+    if ([[notification.userInfo valueForKey:@"item"] isEqualToString:@"red"]) {
+        itemsArray = [self.childItemsArray lastObject];
+    }else{
+        itemsArray = [self.childItemsArray firstObject];
+    }
+    for (NSInteger i = 0; i<[itemsArray count]; i++) {
+        NSDictionary * dict = itemsArray[i];
+        ZJTabBarItem *item = [[ZJTabBarItem alloc]init];
+        item.title = dict[kTitleKey];
+        item.image = [UIImage imageNamed:dict[kImgKey]];
+        item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        item.itemNomalColor = self.itemNomalColor;
+        item.itemSelectedColor = self.itemSelectedColor;
+        item.font = self.font;
+        [self.customTabBar switchTabBarButtonWithItem:item atIndex:i];
+    }
+}
 /*
  Item：就是苹果的模型（用于保存数据）
  TabBarItem:决定着tabBars上按钮的内容
@@ -142,7 +167,14 @@
 #pragma mark 添所有的加子控制器
 -(void)setUPAllChildViewController{
     
-    [self.childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
+    
+    NSArray * itemsArray = [self.childItemsArray lastObject];
+    if (self.isSwitchingTheme && [itemsArray isKindOfClass:[NSArray class]]) {//允许切换主题
+    }else{
+        itemsArray = self.childItemsArray;
+    }
+
+    [itemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
         UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
         vc.title = dict[kTitleKey];
         ZJNavigationController *nav = [[ZJNavigationController alloc] initWithRootViewController:vc];

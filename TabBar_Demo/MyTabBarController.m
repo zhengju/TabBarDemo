@@ -21,20 +21,22 @@
 - (void)viewDidLoad {
     
     self.separateBtnIndex = 2;
-    self.interceptIndex = 3;
+//    self.interceptIndex = 3;
     //是否超出tabBar
     //self.isSeparateBtnHit = YES;
     
+    self.isSwitchingTheme = YES;//切换主题
+    
     [super viewDidLoad];
 
-    self.isIntercept = YES;
+//    self.isIntercept = YES;
 
     self.defaultSelectedIndex = 0;
     
 }
 -(void)setUPAllChildViewController{
 
-    self.childItemsArray = @[
+    self.childItemsArray = @[@[
                                  @{kClassKey  : @"HomeController",
                                    kTitleKey  : @"首页",
                                    kImgKey    : @"shouyexuanzhong",
@@ -59,8 +61,33 @@
                                    kTitleKey  : @"我的",
                                    kImgKey    : @"wode",
                                    kSelImgKey : @"wodexuanzhong"},
-                                 ];
-    
+                                 ],
+                                @[
+                                  @{kClassKey  : @"HomeController",
+                                    kTitleKey  : @"首页",
+                                    kImgKey    : @"灰狗",
+                                    kSelImgKey : @"红狗"},
+                                  
+                                  @{kClassKey  : @"ServiceController",
+                                    kTitleKey  : @"购物车",
+                                    kImgKey    : @"灰蝙蝠",
+                                    kSelImgKey : @"红蝙蝠"},
+                                  
+                                  @{kClassKey  : @"AddNewController",
+                                    kTitleKey  : @"添加",
+                                    kImgKey    : @"灰猴",
+                                    kSelImgKey : @"红猴"},
+                                  
+                                  @{kClassKey  : @"MessagesController",
+                                    kTitleKey  : @"消息",
+                                    kImgKey    : @"灰兔",
+                                    kSelImgKey : @"红兔"},
+                                  
+                                  @{kClassKey  : @"MeController",
+                                    kTitleKey  : @"我的",
+                                    kImgKey    : @"灰蝙蝠",
+                                    kSelImgKey : @"红蝙蝠"},
+                                  ]];
     
     
     
@@ -68,8 +95,6 @@
     
     self.itemSelectedColor =  RGBACOLOR(63, 101, 186, 1.0);
 
-    
-    
     [super setUPAllChildViewController];
 
 }
