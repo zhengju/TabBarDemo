@@ -1,6 +1,7 @@
 
 
 #import "ZJTabBar.h"
+#import "ZJTabBarItem.h"
 #import "ZJTabBarButton.h"
 #import "ZJNavigationController.h"
 
@@ -39,13 +40,14 @@
 }
 -(void)addTabBarButtonWithItem:(ZJTabBarItem *)item{
     //1、创建按钮
-     ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
     
+    ZJTabBarButton *button=[[ZJTabBarButton alloc]init];
+    button.badgeValue = item.badgeValue;
     //判断是否添加中间为大按钮
     if (self.tabBarButtons.count == _separateBtnIndex && _separateBtnIndex != 0) {
-        
+
          button=[[ZJTabBarNormalBtn alloc]init];
-        
+
     }
 
     [self addSubview:button];
@@ -63,11 +65,20 @@
     self.selectedIndex = 0;
     _index = 0;
 }
+
 -(void)switchTabBarButtonWithItem:(ZJTabBarItem *)item atIndex:(NSInteger)index{
     if (index < [self.tabBarButtons count]) {
         ZJTabBarButton *button = self.tabBarButtons[index];
         button.item = item;
     }
+}
+#pragma mark -- 设置角标
+-(void)badgeValueTabBarButtonWithItem:(ZJTabBarItem *)item atIndex:(NSInteger)index{
+    if (index < [self.tabBarButtons count]) {
+        ZJTabBarButton *button = self.tabBarButtons[index];
+        button.badgeValue = item.badgeValue;
+    }
+    
 }
 - (void)setSelectedIndex:(NSInteger)selectedIndex{
     

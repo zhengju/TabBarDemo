@@ -64,27 +64,27 @@
                                  ],
                                 @[
                                   @{kClassKey  : @"HomeController",
-                                    kTitleKey  : @"首页",
+                                    kTitleKey  : @"狗子",
                                     kImgKey    : @"灰狗",
                                     kSelImgKey : @"红狗"},
                                   
                                   @{kClassKey  : @"ServiceController",
-                                    kTitleKey  : @"购物车",
+                                    kTitleKey  : @"蝙蝠",
                                     kImgKey    : @"灰蝙蝠",
                                     kSelImgKey : @"红蝙蝠"},
                                   
                                   @{kClassKey  : @"AddNewController",
-                                    kTitleKey  : @"添加",
+                                    kTitleKey  : @"猴子",
                                     kImgKey    : @"灰猴",
                                     kSelImgKey : @"红猴"},
                                   
                                   @{kClassKey  : @"MessagesController",
-                                    kTitleKey  : @"消息",
+                                    kTitleKey  : @"兔子",
                                     kImgKey    : @"灰兔",
                                     kSelImgKey : @"红兔"},
                                   
                                   @{kClassKey  : @"MeController",
-                                    kTitleKey  : @"我的",
+                                    kTitleKey  : @"蝙蝠",
                                     kImgKey    : @"灰蝙蝠",
                                     kSelImgKey : @"红蝙蝠"},
                                   ]];

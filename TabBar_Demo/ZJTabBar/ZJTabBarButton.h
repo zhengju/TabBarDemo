@@ -8,7 +8,7 @@
 @class ZJTabBarItem;
 @interface ZJTabBarButton : UIButton
 @property(nonatomic,strong)ZJTabBarItem *item;
-
+@property(copy,nonatomic) NSString * badgeValue;
 @end
 
 #import "ZJTabBarButton.h"

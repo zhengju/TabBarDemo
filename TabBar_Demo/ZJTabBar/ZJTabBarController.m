@@ -8,7 +8,8 @@
 #import "ZJTabBarItem.h"
 #import "ZJTabBarButton.h"
 
-static NSString * SWITCHINGTHEME = @"switchingTheme";
+NSString * const SWITCHINGTHEME = @"switchingTheme";
+NSString * const BADGEVALUE = @"badgeValue";
 
 
 @interface ZJTabBarController ()<ZJTabBarDetagate>
@@ -57,7 +58,7 @@ static NSString * SWITCHINGTHEME = @"switchingTheme";
     [self setupTabBar];
     //添加自控制器
     [self setUPAllChildViewController];
-    [self setNotifinotion];
+    [self addNotifinotion];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -134,8 +135,26 @@ static NSString * SWITCHINGTHEME = @"switchingTheme";
         [self tabBarSelectedBtnSuccess:to];
     }
 }
-- (void)setNotifinotion{
+- (void)addNotifinotion{
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(switchingThemeNotification:) name:SWITCHINGTHEME object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(badgeValueNotification:) name:BADGEVALUE object:nil];
+}
+
+- (void)badgeValueNotification:(NSNotification *)notification{
+    
+    NSDictionary * userInfo = notification.userInfo;
+    
+    NSString * badgeValue = [userInfo valueForKey:BADGEVALUE];
+    
+    NSInteger index = [[userInfo valueForKey:@"index"] integerValue];
+    
+    ZJTabBarItem *item = [[ZJTabBarItem alloc]init];
+    
+    item.badgeValue = badgeValue;
+    
+    [self.customTabBar badgeValueTabBarButtonWithItem:item atIndex:index ];
+    
 }
 - (void)switchingThemeNotification:(NSNotification *)notification{
     NSArray * itemsArray = nil;
@@ -179,6 +198,7 @@ static NSString * SWITCHINGTHEME = @"switchingTheme";
         vc.title = dict[kTitleKey];
         ZJNavigationController *nav = [[ZJNavigationController alloc] initWithRootViewController:vc];
         ZJTabBarItem *item = [[ZJTabBarItem alloc]init];
+        
         item.title = dict[kTitleKey];
         item.image = [UIImage imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -186,7 +206,7 @@ static NSString * SWITCHINGTHEME = @"switchingTheme";
         item.itemNomalColor = self.itemNomalColor;
         item.itemSelectedColor = self.itemSelectedColor;
         item.font = self.font;
-        
+        NSLog(@"item");
         [self addChildViewController:nav];//添加视图控制器
         [self.customTabBar addTabBarButtonWithItem:item];
     }];

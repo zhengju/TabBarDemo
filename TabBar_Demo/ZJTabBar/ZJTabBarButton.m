@@ -28,7 +28,7 @@
 #pragma mark - 颜色值
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 @interface ZJTabBarButton()
-
+@property(strong,nonatomic) UILabel * badgeValueLabel;
 @end
 
 @implementation ZJTabBarButton
@@ -50,10 +50,12 @@
 -(void)setItem:(ZJTabBarItem *)item{
     _item = item;
     //KVO监听属性改变
- 
-     [item addObserver:self forKeyPath:@"title" options:0 context:nil];
+
+    [item addObserver:self forKeyPath:@"title" options:0 context:nil];
+
      [item addObserver:self forKeyPath:@"image" options:0 context:nil];
      [item addObserver:self forKeyPath:@"selectedImage" options:0 context:nil];
+    
     //设置 文字
     [self setTitle:self.item.title forState:UIControlStateNormal];
     [self setTitle:self.item.title forState:UIControlStateSelected];
@@ -66,10 +68,11 @@
     
     self.titleLabel.font = _item.font;
     
+    self.badgeValue = item.badgeValue;
 }
 
 -(void)dealloc{
-    
+
     [self.item removeObserver:self forKeyPath:@"title"];
     [self.item removeObserver:self forKeyPath:@"image"];
     [self.item removeObserver:self forKeyPath:@"selectedImage"];
@@ -86,11 +89,25 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     //做监听工作
-    
-    
+
+}
+- (void)setBadgeValue:(NSString *)badgeValue{
+    if ([badgeValue length] == 0 || badgeValue == nil || [badgeValue integerValue] == 0) {
+        self.badgeValueLabel.hidden = YES;
+        return;
+    }
+    self.badgeValueLabel.hidden  = NO;
+    self.badgeValueLabel.text = badgeValue;
+    if ([badgeValue integerValue] >99) {
+        self.badgeValueLabel.text = @"99+";
+    }
     
 }
-
+- (void)setFrame:(CGRect)frame{
+    [super setFrame:frame];
+    self.badgeValueLabel.frame = CGRectMake(frame.size.width-30, 0, 30, 30);
+    
+}
 -(id)initWithFrame:(CGRect)frame{
     
     if(self=[super initWithFrame:frame]){
@@ -98,12 +115,27 @@
         self.imageView.contentMode = UIViewContentModeCenter;
         
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        
+
+        [self addSubview:self.badgeValueLabel];
+
     }
     return self;
 }
 //重写去掉高亮的状态
 -(void)setHighlighted:(BOOL)highlighted{
     
+}
+- (UILabel *)badgeValueLabel{
+    if (_badgeValueLabel == nil) {
+        
+        _badgeValueLabel = [[UILabel alloc]init];
+        _badgeValueLabel.backgroundColor = [UIColor redColor];
+        _badgeValueLabel.textColor = [UIColor whiteColor];
+        _badgeValueLabel.font = [UIFont systemFontOfSize:13];
+        _badgeValueLabel.textAlignment = NSTextAlignmentCenter;
+        _badgeValueLabel.layer.masksToBounds = YES;
+        _badgeValueLabel.layer.cornerRadius = 15;
+    }
+    return _badgeValueLabel;
 }
 @end

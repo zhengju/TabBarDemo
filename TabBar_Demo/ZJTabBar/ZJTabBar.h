@@ -45,6 +45,15 @@
  @param index 按钮位置信息
  */
 -(void)switchTabBarButtonWithItem:(ZJTabBarItem *)item atIndex:(NSInteger)index;
+
+/**
+ 按钮设置角标
+
+ @param item UITabBarItem ，携带配置信息
+ @param index 按钮位置信息
+ */
+-(void)badgeValueTabBarButtonWithItem:(ZJTabBarItem *)item atIndex:(NSInteger)index;
+
 - (void)selectedSuccess;
 
 @end

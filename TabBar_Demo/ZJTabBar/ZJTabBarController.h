@@ -5,6 +5,9 @@
 #define kSelImgKey  @"selectedImageName"
 
 
+
+
+
 #import <UIKit/UIKit.h>
 
 @protocol ZJTabBarControllerProtocol<NSObject>
@@ -25,7 +28,11 @@
 
 @class ZJTabBarController;
 
+
 static ZJTabBarController * tabar = nil;
+
+extern NSString * const  BADGEVALUE;
+extern NSString * const  SWITCHINGTHEME;
 
 @interface ZJTabBarController : UITabBarController<ZJTabBarControllerProtocol>
 

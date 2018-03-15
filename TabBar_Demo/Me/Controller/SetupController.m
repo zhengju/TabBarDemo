@@ -7,7 +7,7 @@
 //
 
 #import "SetupController.h"
-
+#import "ZJTabBarController.h"
 @interface SetupController ()
 
 @end
@@ -25,12 +25,12 @@
 }
 - (IBAction)normalItemClick:(UIButton *)sender {
   
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"switchingTheme" object:nil userInfo:@{@"item":@"normal"}];
+    [[NSNotificationCenter defaultCenter]postNotificationName:SWITCHINGTHEME object:nil userInfo:@{@"item":@"normal"}];
 }
 
 - (IBAction)redItemClick:(UIButton *)sender {
   
-     [[NSNotificationCenter defaultCenter]postNotificationName:@"switchingTheme" object:nil userInfo:@{@"item":@"red"}];
+     [[NSNotificationCenter defaultCenter]postNotificationName:SWITCHINGTHEME object:nil userInfo:@{@"item":@"red"}];
 }
 
 @end

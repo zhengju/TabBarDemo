@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"购物车";
+//    self.title = @"购物车";
 }
 
 - (IBAction)loginClick:(UIButton *)sender {

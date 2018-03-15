@@ -7,7 +7,7 @@
 //
 
 #import "HomeController.h"
-
+#import "ZJTabBarController.h"
 @interface HomeController ()
 
 @end
@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [[NSNotificationCenter defaultCenter]postNotificationName:BADGEVALUE object:nil userInfo:@{BADGEVALUE:@"1033",@"index":@(3)}];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,5 +15,6 @@
     if (_font == nil) {
         _font = [UIFont systemFontOfSize:14];
     }
+    
 }
 @end

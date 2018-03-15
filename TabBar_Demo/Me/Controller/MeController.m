@@ -8,6 +8,7 @@
 
 #import "MeController.h"
 #import "SetupController.h"
+#import "ZJTabBarController.h"
 @interface MeController ()
 
 @end
@@ -16,8 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   self.title = @"我的";
+//   self.title = @"我的";
     self.backBtn.hidden = YES;
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:BADGEVALUE object:nil userInfo:@{BADGEVALUE:@"0",@"index":@(3)}];
+    
 }
 - (IBAction)setUpClick:(UIButton *)sender {
     SetupController * setupController = [[SetupController alloc]init];
